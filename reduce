@@ -1,4 +1,4 @@
-var AsistenciaEstudiantes = [7, 14, 21, 28];
+const AsistenciaEstudiantes = [7, 14, 21, 28];
 
 function countAlumnos(AsistenciaEstudiantes) {
 
@@ -9,23 +9,33 @@ function countAlumnos(AsistenciaEstudiantes) {
        return accumulator + asistentes;
 
      }
-
+     0
   );
 
   return totalEstudiantes;
 
 }
 
- 
 
-// const AsistenciaEstudiantes = [7, 14, 21, 28]
+var resultado = countAlumnos(AsistenciaEstudiantes);
 
-// countAllStars(galaxies)
+document.write(resultado);
 
-// ejecución( E )
+///////////////////////////////////////////////////////////////////////////////
 
-var resultado = countAlumnos(AsistenciaEstudiantes)
+const AsistenciaEstudiantes = [7, 14, 21, 28];
 
-// salida ( O )
+function countAlumnos(AsistenciaEstudiantes) {
+  var totalEstudiantes = AsistenciaEstudiantes.reduce(
+    function (accumulator, asistentes) {
+      return accumulator + asistentes;
+    },
+    0 
+  );
+
+  return totalEstudiantes;
+}
+
+var resultado = countAlumnos(AsistenciaEstudiantes);
 
 document.write(resultado);
