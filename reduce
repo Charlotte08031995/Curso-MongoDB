@@ -1,1 +1,31 @@
+var AsistenciaEstudiantes = [7, 14, 21, 28];
 
+function countAlumnos(AsistenciaEstudiantes) {
+
+  var totalEstudiantes = AsistenciaEstudiantes.reduce(
+
+     function (accumulator, asistentes) {
+
+       return accumulator + asistentes;
+
+     }
+
+  );
+
+  return totalEstudiantes;
+
+}
+
+ 
+
+// const AsistenciaEstudiantes = [7, 14, 21, 28]
+
+// countAllStars(galaxies)
+
+// ejecución( E )
+
+var resultado = countAlumnos(AsistenciaEstudiantes)
+
+// salida ( O )
+
+document.write(resultado);
