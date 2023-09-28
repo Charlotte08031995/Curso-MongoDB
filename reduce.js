@@ -1,4 +1,4 @@
-const AsistenciaEstudiantes = [7, 14, 21, 28];
+/*const AsistenciaEstudiantes = [7, 14, 21, 28];
 
 function countAlumnos(AsistenciaEstudiantes) {
 
@@ -19,9 +19,9 @@ function countAlumnos(AsistenciaEstudiantes) {
 
 var resultado = countAlumnos(AsistenciaEstudiantes);
 
-document.write(resultado);
+document.write(resultado);*/
 
-///////////////////////////////////////////////////////////////////////////////
+
 
 const AsistenciaEstudiantes = [7, 14, 21, 28];
 
