@@ -58,7 +58,7 @@ const sumaMatriculas = registros.reduce((accumulator, registro) => {
   }
 }, 0);
 
-console.log('Total de matrículas:', sumaMatriculas);
+document.write('Total de matrículas:', sumaMatriculas);
 
 
 //Télefonos estudiantes matriculados
