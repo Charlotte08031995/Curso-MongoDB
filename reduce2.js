@@ -59,3 +59,16 @@ const sumaMatriculas = registros.reduce((accumulator, registro) => {
 }, 0);
 
 console.log('Total de matrículas:', sumaMatriculas);
+
+
+//Télefonos estudiantes matriculados
+
+const telEstudiantes = [];
+
+registros.forEach(registro => {
+    if(registro.detalles && registro.detalles.contacto && registro.detalles.contacto.telefono) {
+        telEstudiantes.push(registro.detalles.contacto.telefono);
+        }
+});
+
+document.write('Números de contacto:', telEstudiantes);
