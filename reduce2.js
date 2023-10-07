@@ -50,6 +50,7 @@ const registros = [
 ];
 
 // Calcular la suma total de las matrículas usando reduce
+
 const sumaMatriculas = registros.reduce((accumulator, registro) => {
   if (registro.detalles && registro.detalles.valorMatricula) {
     return accumulator + registro.detalles.valorMatricula;
@@ -72,3 +73,17 @@ registros.forEach(registro => {
 });
 
 document.write('Números de contacto:', telEstudiantes);
+
+
+//mayor valor matrícula
+
+const valorMatriculas = [];
+
+registros.forEach(registro => {
+    if(registro.detalles && registro.detalles.valorMatricula) {
+        valorMatriculas.push(registro.detalles.valorMatricula);
+        }
+});
+
+document.write('Valor de las Matrículas', valorMatriculas);
+document.write('El valor más alto de las matrículas a pagar es: ', valorMatriculas[2]);
