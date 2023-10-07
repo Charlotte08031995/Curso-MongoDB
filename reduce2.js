@@ -85,5 +85,6 @@ registros.forEach(registro => {
         }
 });
 
-document.write('Valor de las Matrículas', valorMatriculas);
-document.write('El valor más alto de las matrículas a pagar es: ', valorMatriculas[2]);
+const valorMayor = Math.max(...valorMatriculas);
+
+document.write('El valor más alto a pagar es: ', valorMayor);
