@@ -88,3 +88,22 @@ registros.forEach(registro => {
 const valorMayor = Math.max(...valorMatriculas);
 
 document.write('El valor más alto a pagar es: ', valorMayor);
+
+
+
+
+//Correo de estudiante con matrícula condicional
+
+
+// Supongamos que tienes un arreglo llamado registros que contiene los datos de los estudiantes.
+
+registros.forEach(registro => {
+  if (registro.detalles && registro.detalles.valorMatricula === 0) {
+    // Verificar si el valor de matrícula es igual a 0 (matrícula condicional)
+    if (registro.detalles.contacto && registro.detalles.contacto.email) {
+      // Verificar si se proporciona una dirección de correo
+      const correoEstudiante = registro.detalles.contacto.email;
+      document.write('El correo del estudiante con matrícula condicional es:', correoEstudiante);
+    }
+  }
+});
