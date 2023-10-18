@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Tienda Virtual</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    .contenedor {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="contenedor"></div>
+  <div class="detalles" style="display: none;"></div>
+  <script>
+    // Función para obtener datos de la API ficticia
+    async function obtenerProductos() {
+      try {
+        const response = await fetch('https://fakestoreapi.com/products');
+        if (!response.ok) {
+          throw new Error('Error en la solicitud');
+        }
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error('Error:', error);
+        return [];
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      const contenedor = document.querySelector(".contenedor");
+      const products = await obtenerProductos();
+      console.log(products)
+      let productos = "";
+      products.forEach((product) => {
+        productos += `
+          <div class="card">
+            <img width="150" src="${product.image}">
+            <div class="card-body">
+              <h3>${product.title}"</h3>
+              <p class="card-text">${product.price}</p>
+            </div>
+          </card>  
+        `
+      })
+
+      contenedor.innerHTML = productos;
+    });
+  </script>
+</body>
+
+</html>
